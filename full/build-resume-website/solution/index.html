@@ -1,16 +1,16 @@
 <html>
 	<head>
 		<link href="style.css" rel="stylesheet">
-		<title>Your name resume</title>
+		<title>Reshmi Sriram resume</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	</head>
 
 	<body>
 		<header id="header">
 			<!-- resume header with your name and title -->
-			<h1>YOUR NAME</h1>
+			<h1>RESHMI SRIRAM</h1>
 			<hr>
-			YOUR TITLE
+			MY AMAZING HTML RESUME!
 			<hr>
 		</header>
 		<main>
@@ -20,31 +20,39 @@
 					<!-- contact info including social media -->
                     <p>
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:your-email@example.com">your-email@example.com</a>
+                        <a href="mailto:reshmisriram@microsoft.com">reshmisriram@microsoft.com</a>
                     </p>
                     <p>
                         <i class="fab fa-github" aria-hidden="true"></i>
-                        <a href="github.com/gh-username">gh-username</a>
+                        <a href="https://github.com/Reshmi-Sriram">Reshmi-Sriram</a>
                     </p>
                     <p>
                         <i class="fab fa-linkedin" aria-hidden="true"></i>
-                        <a href="linkedin.com/linkedin-username">linkedin-username</a>
+                        <a href="https://linkedin.com/in/reshmi-sriram/">reshmisriram</a>
                     </p>
 				</section>
 				<section>
 					<h2>SKILLS</h2>
 					<!-- your skills -->
-                    <p>HTML, CSS, GitHub, VS Code...</p>
+                    <p>HTML, CSS, GitHub, VS Code, <b>Static Web Apps</b>...</p>
+					<p>Talking, presenting, pretending to code...</p>
 				</section>
 				<section>
 					<h2>EDUCATION</h2>
 					<!-- your education -->
-                    <h3>YOUR MAJOR</h3>
+                    <h3>MBA - BUSINESS MANAGEMENT</h3>
                     <p>
-                        Your university or school
+                        XLRI Jamshedpur
                     </p>
                     <p>
-                        2018-2022
+                        2019-2021
+                    </p>
+					<h3>B.TECH COMPUTER SCIENCE</h3>
+                    <p>
+                        National Institute of Technology Calicut
+                    </p>
+                    <p>
+                        2013-2017
                     </p>
 				</section>            
 			</article>
@@ -52,25 +60,44 @@
 				<section>
 					<h2>ABOUT</h2>
 					<!-- about you -->
-					<p>A brief paragraph about you and what kind of company you want to work for.</p>
+					<img src="/images/Reshmi Sriram.jpg" style="height: 150px;">
+					<p>Heyy, Reshmi here! I am a Program Manager at Azure Static Web Apps, Microsoft. I come from a technical + business background, and love to learn new ways of coding with the developers :)</p>
+					<p>Looking for more fun opportunities to widen my learning, experience first-hand development revolutionaries, and solve developer painpoints!</p>
 				</section>
 				<section>
 					<h2>WORK EXPERIENCE</h2>
 					<!-- your work experience -->
-                    <h3>JOB TITLE</h3>
+                    <h3>Program Manager - Microsoft</h3>
                     <p>
-                            Company Name | 2008 - 2010
-                    </p>
-                    <p>
-                            Describe what you did in this position with one summary sentence and no more than 3 bullet points with specific highlights
+                            2021- Current
                     </p>
                     <ul>
-                            <li>Cool accomplishment</li>
-                            <li>Cool accomplishment</li>
-                            <li>Cool accomplishment</li>
+                            <li>Hosted Static Web Apps Anniversary - <a href="https://aka.ms/swaanniversary">May 2022</a></li>
+                            <li>Launched features such as Azure Pipeline integration, SWA CLI, and more </li>
+                            <li>Next.js hyrbid rendering and other Cool accomplishments upcoming ;)</li>
+                    </ul>
+					
+					<h3>Senior Analyst - Deutsche Bank</h3>
+                    <p>
+                            2017-2019
+                    </p>
+                    <ul>
+                            <li>Workday Cloud Migration, HRBP</li>
+                            <li>Other Coding stuff</li>
                     </ul>
 				</section>
 			</article>
+			<section>
+				<button class="btn btn-primary" onclick=getProjects()>Click me</button>
+			</section>
+			<p id="demo"></p>
 		</main>
+		<script>
+			function getProjects(){
+				let response = fetch('/api/projects');
+    			projects = response.json();
+				document.getElementById("demo").innerHTML = projects;
+			}
+		</script>
 	</body>
 </html>

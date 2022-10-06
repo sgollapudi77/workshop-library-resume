@@ -44,3 +44,6 @@ Be sure to give [feedback about this workshop](https://forms.office.com/r/MdhJWM
 
 [Code of Conduct](../../CODE_OF_CONDUCT.md)
 
+## Resources
+To see the full workshop repository with other interesting and easy-learn modules, kindly check out this [repository](https://github.com/microsoft/workshop-library)
+
